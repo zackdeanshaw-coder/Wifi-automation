@@ -27,7 +27,19 @@ for p in "${plists[@]}"; do
     launchctl load -w "$agents_dir/$p"
 done
 
+# Wake the Mac daily at 16:55 so the Fri 5pm OFF event fires on time even if
+# the lid is closed. launchd's StartCalendarInterval otherwise waits until the
+# Mac wakes on its own. pmset repeat allows only one repeat per event type, so
+# one daily wake is the best a single command can do; the README explains how
+# to use one-shot pmset schedules if you also need to hit the Sun 7am OFF
+# precisely while asleep.
+echo "==> Setting daily wake at 16:55 (covers the Fri 5pm OFF event)"
+echo "    NOTE: this replaces any existing 'pmset repeat' schedule on this Mac."
+sudo pmset repeat wakeorpoweron MTWRFSU 16:55:00
+
 echo
-echo "Done. Log: /tmp/wifi-schedule.log"
-echo "Verify with:  launchctl list | grep com.user.wifi"
-echo "Test now:     $script_dest off   (then 'on')"
+echo "Done."
+echo "Log:              /tmp/wifi-schedule.log"
+echo "Verify agents:    launchctl list | grep com.user.wifi"
+echo "Verify wake:      pmset -g sched"
+echo "Test toggle now:  $script_dest off   (then 'on')"
