@@ -11,10 +11,18 @@
         <string>off</string>
     </array>
 
-    <!-- Friday 17:00 (5pm) and Sunday 07:00 (7am).
+    <!-- Thursday 17:00 (5pm), Friday 17:00 (5pm), and Sunday 07:00 (7am).
          Weekday values: Sun=0, Mon=1, Tue=2, Wed=3, Thu=4, Fri=5, Sat=6 -->
     <key>StartCalendarInterval</key>
     <array>
+        <dict>
+            <key>Weekday</key>
+            <integer>4</integer>
+            <key>Hour</key>
+            <integer>17</integer>
+            <key>Minute</key>
+            <integer>0</integer>
+        </dict>
         <dict>
             <key>Weekday</key>
             <integer>5</integer>

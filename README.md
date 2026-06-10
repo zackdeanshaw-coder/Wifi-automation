@@ -12,13 +12,16 @@ software.
 
 | Day        | Time     | Wi-Fi |
 |------------|----------|-------|
+| Thursday   | 5:00 PM  | OFF   |
+| Thursday   | 11:00 PM | ON    |
 | Friday     | 5:00 PM  | OFF   |
 | Friday     | 10:00 PM | ON    |
 | Sunday     | 7:00 AM  | OFF   |
 | Monday     | 12:00 AM | ON    |
 
-So Wi-Fi is **ON** from Monday 12am through Friday 5pm, **OFF** Friday evening
-5pm–10pm, **ON** Friday 10pm through Sunday 7am, **OFF** Sunday 7am to midnight.
+So Wi-Fi is **ON** Mon 12am → Thu 5pm, **OFF** Thu 5pm–11pm, **ON** Thu 11pm →
+Fri 5pm, **OFF** Fri 5pm–10pm, **ON** Fri 10pm → Sun 7am, **OFF** Sun 7am →
+Mon 12am.
 
 ## Install
 

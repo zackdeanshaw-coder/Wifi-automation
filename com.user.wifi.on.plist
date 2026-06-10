@@ -11,10 +11,18 @@
         <string>on</string>
     </array>
 
-    <!-- Friday 22:00 (10pm) and Monday 00:00 (midnight starting Monday).
+    <!-- Thursday 23:00 (11pm), Friday 22:00 (10pm), and Monday 00:00 (midnight).
          Weekday values: Sun=0, Mon=1, Tue=2, Wed=3, Thu=4, Fri=5, Sat=6 -->
     <key>StartCalendarInterval</key>
     <array>
+        <dict>
+            <key>Weekday</key>
+            <integer>4</integer>
+            <key>Hour</key>
+            <integer>23</integer>
+            <key>Minute</key>
+            <integer>0</integer>
+        </dict>
         <dict>
             <key>Weekday</key>
             <integer>5</integer>
